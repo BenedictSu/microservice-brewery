@@ -1,10 +1,9 @@
 package com.brewery.microservicebrewery.services;
 
-import java.util.UUID;
-
+import com.brewery.microservicebrewery.web.model.BeerDto;
 import org.springframework.stereotype.Service;
 
-import com.brewery.microservicebrewery.web.model.BeerDto;
+import java.util.UUID;
 
 @Service
 public class BeerServiceImpl implements BeerService {
@@ -17,6 +16,14 @@ public class BeerServiceImpl implements BeerService {
                 .beerName("first beer")
                 .beerStyle("first style")
                 .universalProductCode(123L)
+                .build();
+    }
+
+    @Override
+    public BeerDto createBeer(BeerDto beerDto) {
+        return BeerDto
+                .builder()
+                .uuid(UUID.randomUUID())
                 .build();
     }
 
