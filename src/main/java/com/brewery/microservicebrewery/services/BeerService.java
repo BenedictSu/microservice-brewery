@@ -4,6 +4,7 @@ import com.brewery.microservicebrewery.web.model.BeerDto;
 
 import java.util.UUID;
 
+@Deprecated
 public interface BeerService {
 
     BeerDto getBeerByUuid(UUID beerUuid);
