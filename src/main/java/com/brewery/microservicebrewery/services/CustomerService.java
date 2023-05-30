@@ -8,4 +8,9 @@ public interface CustomerService {
 
     CustomerDto getCustomerByUuid(UUID customerUuid);
 
+    CustomerDto createCustomer(CustomerDto customerDto);
+
+    void updateCustomer(UUID customerUuid, CustomerDto customerDto);
+
+    void deleteByUuid(UUID customerUuid);
 }
